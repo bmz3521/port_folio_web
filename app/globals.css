@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 
+
+/* ซ่อน scrollbar ในตัวอย่างเบราว์เซอร์ที่รองรับ */
+::-webkit-scrollbar {
+  width: 0;  /* กำหนดความกว้างของ scrollbar เป็น 0 */
+  height: 0; /* ซ่อน scrollbar แนวนอน */
+}
+
+/* หากต้องการซ่อน scrollbar สำหรับเบราว์เซอร์อื่นๆ (ที่ไม่รองรับ `-webkit`) */
+body {
+  overflow: auto;
+}
+
 @layer component {
   .main-container {
       @apply px-2 mx-auto
