@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="p-1 absolute right-0">
         <div className="flex flex-row">
           <p className="pr-2 md:text-base lg:text-lg">{visitCount}</p>
-          <Eye className="m-auto icon" />
+          <Eye className="m-auto icon mr-1" />
         </div>
       </div>
       <div
