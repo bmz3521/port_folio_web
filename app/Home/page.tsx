@@ -1,9 +1,50 @@
+"use client"
+
+import { useEffect } from "react";
 import PageWrapper from "../page-wrapper";
 import Image from "next/image";
+import { collection, getDocs, doc, setDoc, query, where } from 'firebase/firestore';
+import { db } from '../../utils/firebase';
 
 const url = 'https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.6435-9/78604558_3260307624010612_5993925842831409152_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=0SlrduM78kkQ7kNvgEIIWdr&_nc_zt=23&_nc_ht=scontent.fbkk13-2.fna&_nc_gid=ADtxzeW-BVzMgsyi5Y21c0-&oh=00_AYALnU6yRQ8w0M9K7H2CiYj_GxpvzrUvrJQT3Sb6WSfrpA&oe=676FB49D';
 
 const page = () => {
+
+  useEffect(() => {
+    const logVisit = async () => {
+      const ip = await getClientIP(); // Get the client's IP
+      const visitsRef = collection(db, 'visits');
+      const q = query(visitsRef, where('ip', '==', ip));
+      const querySnapshot = await getDocs(q);
+
+      if (querySnapshot.empty) {
+        // If IP does not exist in the database
+        await setDoc(doc(visitsRef), {
+          ip,
+          visitCount: 1
+        });
+      } else {
+        // If IP already exists in the database, update visitCount
+        querySnapshot.forEach(async (docSnapshot) => {
+          const docRef = doc(db, 'visits', docSnapshot.id); // Get reference to the specific document
+          await setDoc(docRef, {
+            ip,
+            visitCount: docSnapshot.data().visitCount + 1 // Access visitCount data correctly
+          });
+        });
+      }
+    };
+
+    logVisit();
+  }, []);
+
+  const getClientIP = async () => {
+    // Use a public API or similar to get the client's IP
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    return data.ip;
+  };
+
   return (
     <PageWrapper>
       <div className="flex flex-col lg:flex-row py-16 px-8">
