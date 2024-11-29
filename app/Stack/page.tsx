@@ -51,9 +51,9 @@ const StackPage = () => {
             loop={false}
             className="swiper-container"
             breakpoints={{
-              0: { slidesPerView: 1 },
-              320: { slidesPerView: 1 },
-              480: { slidesPerView: 1.5 },
+              0: { slidesPerView: 1.5 },
+              320: { slidesPerView: 2 },
+              480: { slidesPerView: 2.5 },
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 5 },
             }}
