@@ -8,7 +8,7 @@ import { db } from '../../utils/firebase';
 
 const url = 'https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.6435-9/78604558_3260307624010612_5993925842831409152_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=0SlrduM78kkQ7kNvgEIIWdr&_nc_zt=23&_nc_ht=scontent.fbkk13-2.fna&_nc_gid=ADtxzeW-BVzMgsyi5Y21c0-&oh=00_AYALnU6yRQ8w0M9K7H2CiYj_GxpvzrUvrJQT3Sb6WSfrpA&oe=676FB49D';
 
-const page = () => {
+const HomePage = () => {
 
   useEffect(() => {
     const logVisit = async () => {
@@ -79,4 +79,4 @@ const page = () => {
     </PageWrapper>
   );
 };
-export default page;
+export default HomePage;
