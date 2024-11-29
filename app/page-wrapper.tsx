@@ -11,7 +11,7 @@ const PageWrapper = ({ children }:Readonly<{
       animate={{ opacity: 1, x: 0 }}
       exist={{ opacity: 0, x: -100 }}
       transition={{ delay: 0.25 }}
-      className="container"
+      className="main-container"
     >
       {children}
     </motion.main>

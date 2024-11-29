@@ -50,10 +50,17 @@ const StackPage = () => {
             slidesPerView={5}
             loop={false}
             className="swiper-container"
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              320: { slidesPerView: 1 },
+              480: { slidesPerView: 1.5 },
+              640: { slidesPerView: 3 },
+              1024: { slidesPerView: 5 },
+            }}
           >
             {category.items.map((tech) => (
               <SwiperSlide key={tech.name} className="flex justify-center pr-4">
-                <div className="mb-4 light:bg-zinc-100 dark:bg-zinc-800 rounded-lg shadow-md w-30 h-28 flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <div className="w-full mb-4 light:bg-zinc-100 dark:bg-zinc-800 rounded-lg shadow-md w-30 h-28 flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-300 ease-in-out">
                   <img
                     src={tech.logo}
                     alt={tech.name}

@@ -8,7 +8,7 @@ const Navbar = () => {
         container 
         flex 
         sm:flex-row
-        justify-between
+        justify-around
         items-center
         py-4
         sm:flex-row

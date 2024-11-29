@@ -4,8 +4,8 @@
 
 
 @layer component {
-  .container {
-      @apply px-8 mx-auto
+  .main-container {
+      @apply px-2 mx-auto
   }
 }
 
@@ -128,3 +128,7 @@
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
+.swiper-container {
+  width: 100%;  /* ให้ Swiper ใช้พื้นที่ทั้งหมด */
+  max-width: 90vw;  /* ป้องกันการ overflow */
+}
