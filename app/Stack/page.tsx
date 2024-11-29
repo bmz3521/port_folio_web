@@ -46,7 +46,7 @@ const StackPage = () => {
             {category.category}
           </h2>
           <Swiper
-            spaceBetween={1} // ลดระยะห่างระหว่างการ์ด
+            spaceBetween={10} // ลดระยะห่างระหว่างการ์ด
             slidesPerView={5}
             loop={false}
             className="swiper-container"
