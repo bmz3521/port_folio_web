@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="flex space-x-6">
             {/* GitHub */}
             <a
-              href="https://github.com/yourprofile"
+              href="https://github.com/bmz3521"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#ec4899] transition-colors duration-300"
@@ -36,7 +36,7 @@ const Footer = () => {
   
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/yourprofile"
+              href="https://www.linkedin.com/in/anurak-kiwphukiaw/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#ec4899] transition-colors duration-300"

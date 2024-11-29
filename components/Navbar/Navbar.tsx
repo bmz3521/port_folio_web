@@ -1,14 +1,13 @@
 import Link from "next/link"
-import { DarkMode } from "./Darkmode"
+import DropdownlistMenu from "./DropdownlistMenu";
 
 const Navbar = () => {
-  const theme: string = "tracking-widest font-semibold text-lg  hover:text-pink-400 cursor-pointer transition ease-in-out duration-300";
   return (
     <nav>
         <div className="
         container 
         flex 
-        flex-col
+        sm:flex-row
         justify-between
         items-center
         py-4
@@ -34,13 +33,9 @@ const Navbar = () => {
               ">
               MILO Anurak
               <p className="text-sm">Developer</p>
+              
             </Link>
-            <div className="flex gap-8 sm:flex-row items-center justify-center font-poppins">
-              <h1 className={theme}>Portfolio</h1>
-              <h1 className={theme}>Contact</h1>
-              <h1 className={theme}>Stack</h1>
-              <DarkMode />
-            </div>
+            <DropdownlistMenu />
         </div>
     </nav>
   )
