@@ -21,7 +21,8 @@ const HomePage = () => {
         // If IP does not exist in the database
         await setDoc(doc(visitsRef), {
           ip,
-          visitCount: 1
+          visitCount: 1,
+          lastVisit: new Date(),
         });
       } else {
         // If IP already exists in the database, update visitCount
