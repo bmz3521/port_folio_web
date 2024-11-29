@@ -20,9 +20,11 @@ const Navbar = () => {
   }, []);
   return (
     <nav>
-      <div className="flex flex-row p-4 absolute right-0">
-        <h1 className="pr-2">{visitCount}</h1>
-        <Eye />
+      <div className="p-1 absolute right-0">
+        <div className="flex flex-row">
+          <p className="pr-2 sm:text-sm lg:text-lg">{visitCount}</p>
+          <Eye className="m-auto icon" />
+        </div>
       </div>
       <div
         className="

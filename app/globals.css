@@ -144,3 +144,22 @@ body {
   width: 100%;  /* ให้ Swiper ใช้พื้นที่ทั้งหมด */
   max-width: 90vw;  /* ป้องกันการ overflow */
 }
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon {
+    width: 15px;
+    height: 15px;
+  }
+}
