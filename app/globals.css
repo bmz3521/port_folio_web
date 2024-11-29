@@ -156,10 +156,3 @@ body {
     height: 20px;
   }
 }
-
-@media (max-width: 480px) {
-  .icon {
-    width: 15px;
-    height: 15px;
-  }
-}
