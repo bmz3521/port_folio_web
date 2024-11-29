@@ -30,7 +30,8 @@ const HomePage = () => {
           const docRef = doc(db, 'visits', docSnapshot.id); // Get reference to the specific document
           await setDoc(docRef, {
             ip,
-            visitCount: docSnapshot.data().visitCount + 1 // Access visitCount data correctly
+            visitCount: docSnapshot.data().visitCount + 1,
+            lastVisit: new Date(),
           });
         });
       }
