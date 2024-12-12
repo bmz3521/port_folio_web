@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../utils/firebase";
 import { Eye } from "lucide-react";
-
+import { TypeAnimation } from "react-type-animation";
 const Navbar = () => {
   const [visitCount, setVisitCount] = useState(0);
 
@@ -56,8 +56,24 @@ const Navbar = () => {
               italic
               "
         >
-          MILO Anurak
-          <p className="text-sm">Developer</p>
+          MILO Anurak 
+          <br/>
+          <TypeAnimation
+            sequence={[
+              "Software Engineer",
+              1000,
+              "Mobile Developer",
+              1000,
+              "Fullstack Developer",
+              1000,
+              "Frontend Developer",
+              1000,
+            ]}
+            wrapper="p"
+            speed={30}
+            style={{ fontSize: "18px", lineHeight: "1"}}
+            repeat={Infinity}
+          />
         </Link>
         <DropdownlistMenu />
       </div>
