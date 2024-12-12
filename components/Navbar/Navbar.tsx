@@ -71,7 +71,7 @@ const Navbar = () => {
             ]}
             wrapper="p"
             speed={30}
-            style={{ fontSize: "18px", lineHeight: "1"}}
+            style={{ fontSize: "18px", lineHeight: "1.5"}}
             repeat={Infinity}
           />
         </Link>
