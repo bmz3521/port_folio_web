@@ -58,7 +58,8 @@ const HomePage = () => {
       <div className="flex flex-col lg:flex-row justify-between py-16 px-2">
         <div className="w-full lg:w-3/4 flex items-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="
+            <h2
+              className="
               text-4xl 
               font-extrabold 
               text-transparent 
@@ -70,10 +71,12 @@ const HomePage = () => {
               hover:animate-none 
               tracking-widest 
               sm:text-6xl 
-              mb-4">
+              mb-4"
+            >
               Hello, welcome
             </h2>
-            <p className="
+            <p
+              className="
               font-extrabold 
               text-transparent 
               bg-gradient-to-r 
@@ -84,7 +87,13 @@ const HomePage = () => {
               hover:animate-none 
               tracking-widest 
               mb-4
-            pr-4  text-base sm:text-lg text-600 leading-relaxed mb-6">
+              pr-4  
+              text-base 
+              sm:text-lg 
+              text-600 
+              leading-relaxed 
+              mb-6"
+            >
               I'm Motivated creative thinker with high intention to apply broad
               knowledge and passion in designing developing and implementing
               application to create spectacular outcomes to the world of modern
