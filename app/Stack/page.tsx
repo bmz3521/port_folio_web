@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import PageWrapper from "../page-wrapper";
-import Image from "next/image";
+
 const techStack = [
   {
     category: "Languages",
@@ -61,7 +61,7 @@ const StackPage = () => {
             {category.items.map((tech) => (
               <SwiperSlide key={tech.name} className="flex justify-center pr-4">
                 <div className="w-full mb-4 light:bg-zinc-100 dark:bg-zinc-800 rounded-lg shadow-md w-30 h-28 flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-300 ease-in-out">
-                  <Image
+                  <img
                     src={tech.logo}
                     alt={tech.name}
                     className="rounded-xl w-14 h-14 mb-2 object-contain"

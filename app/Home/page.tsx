@@ -94,11 +94,11 @@ const HomePage = () => {
               leading-relaxed 
               mb-6"
             >
-              I'm Motivated creative thinker with high intention to apply broad
+              {`I'm Motivated creative thinker with high intention to apply broad
               knowledge and passion in designing developing and implementing
               application to create spectacular outcomes to the world of modern
               technology. Fast learner and willing to learn new skill stack
-              Developer for further improvement.
+              Developer for further improvement.`}
             </p>
           </div>
         </div>
